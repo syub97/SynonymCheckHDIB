@@ -10,7 +10,7 @@
 </dataSources>
 <snapshotProcedures/>
 <calculationViews>
-  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1" ignoreMultipleOutputsForFilter="false">
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_SYNONYM" ignoreMultipleOutputsForFilter="false">
     <viewAttributes>
       <viewAttribute id="SalesOrderId"/>
       <viewAttribute id="ProductId"/>
@@ -22,26 +22,26 @@
   </calculationView>
 </calculationViews>
 
-<logicalModel id="Projection_1">
+<logicalModel id="P_SYNONYM">
   <attributes>
     <attribute id="SalesOrderId" order="1" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="Sales Order ID"/>
-      <keyMapping columnObjectName="Projection_1" columnName="SalesOrderId"/>
+      <keyMapping columnObjectName="P_SYNONYM" columnName="SalesOrderId"/>
     </attribute>
     <attribute id="ProductId" order="2" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="Product ID"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ProductId"/>
+      <keyMapping columnObjectName="P_SYNONYM" columnName="ProductId"/>
     </attribute>
     <attribute id="DeliveryDate" order="4" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="Scheduled Delivery Date"/>
-      <keyMapping columnObjectName="Projection_1" columnName="DeliveryDate"/>
+      <keyMapping columnObjectName="P_SYNONYM" columnName="DeliveryDate"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
   <baseMeasures>
     <measure id="Quantity" order="3" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
       <descriptions defaultDescription="Quantity"/>
-      <measureMapping columnObjectName="Projection_1" columnName="Quantity"/>
+      <measureMapping columnObjectName="P_SYNONYM" columnName="Quantity"/>
     </measure>
   </baseMeasures>
   <calculatedMeasures/>
@@ -57,7 +57,7 @@
     </shape>
     
   
-    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+    <shape expanded="true" modelObjectName="P_SYNONYM" modelObjectNameSpace="CalculationView">
       <upperLeftCorner x="92" y="217"/>
       <rectangleSize height="30" width="160"/>
     </shape>
