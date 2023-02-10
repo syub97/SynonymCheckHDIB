@@ -1,0 +1,31 @@
+_schema-version: "2.1"
+ID: CS1HDIB
+version: 0.0.1
+modules:
+- name: CS1HDIBdb
+  type: hdb
+  path: CS1HDIBdb
+  requires:
+  - name: hdi_CS1HDIBdb
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+  - name: cross-container-service-1
+    group: SERVICE_REPLACEMENTS
+    properties:
+      key: ServiceName_1
+      service: ~{the-service-name}
+resources:
+- name: hdi_CS1HDIBdb
+  type: com.sap.xs.hdi-container
+  parameters:
+    config:
+      database_id: 0ae2197f-de5a-4c15-b28d-b93c2636af0e
+      schema: CS1B_SCHEMA
+  properties:
+    hdi-container-name: ${service-name}
+- name: cross-container-service-1
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: CS1HDIA-SI
+  properties:
+    the-service-name: ${service-name}

@@ -1,0 +1,8 @@
+{
+  "SYNCS1TAB" : {
+    "target" : {
+    "schema": "CS1A_SCHEMA_1",
+    "object": "CS1TAB"
+    }
+}
+}
